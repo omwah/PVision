@@ -7,7 +7,7 @@
 #ifndef PVision_h
 #define PVision_h
 
-#include "WConstants.h"
+#include <Arduino.h>
 #include <Wire.h>
 
 // bit flags for blobs

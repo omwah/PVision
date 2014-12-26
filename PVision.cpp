@@ -15,7 +15,7 @@
 void PVision::Write_2bytes(byte d1, byte d2)
 {
     Wire.beginTransmission(IRslaveAddress);
-    Wire.send(d1); Wire.send(d2);
+    Wire.write(d1); Wire.write(d2);
     Wire.endTransmission();
 }
 
@@ -55,7 +55,7 @@ byte PVision::read()
 {
     //IR sensor read
     Wire.beginTransmission(IRslaveAddress);
-    Wire.send(0x36);
+    Wire.write(0x36);
     Wire.endTransmission();
 
     Wire.requestFrom(IRslaveAddress, 16);        // Request the 2 byte heading (MSB comes first)
@@ -68,7 +68,7 @@ byte PVision::read()
 
     while(Wire.available() && i < 16)
     {
-        data_buf[i] = Wire.receive();
+        data_buf[i] = Wire.read();
         i++;
     }
 
