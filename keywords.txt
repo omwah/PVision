@@ -17,4 +17,4 @@ read	KEYWORD2
 # Constants (LITERAL1)
 #######################################
 
-PVision KEYWORD2
+PVision	KEYWORD2
